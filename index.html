@@ -501,17 +501,22 @@
                     };
 
                     try {
-                        const response = await fetch(
-                            `${API_CONFIG.baseUrl}/v1beta/models/${model}:generateContent?key=${API_CONFIG.apiKey}`,
-                            {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({
-                                    contents: [{ parts: [{ text: prompt }] }],
-                                    generationConfig: generationConfig,
-                                }),
-                            }
-                        );
+                        let fetchUrl = `${API_CONFIG.baseUrl}/v1beta/models/${model}:generateContent?key=${API_CONFIG.apiKey}`;
+                        let fetchOptions = {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                contents: [{ parts: [{ text: prompt }] }],
+                                generationConfig: generationConfig,
+                            }),
+                        };
+                        
+                        // 检测是否在 GitHub Pages 环境且 API 是 HTTP
+                         if (location.protocol === 'https:' && API_CONFIG.baseUrl.startsWith('http:')) {
+                             throw new Error('Mixed Content 错误：HTTPS 页面无法请求 HTTP API。\n\n解决方案：\n1. 配置 API 服务器支持 HTTPS\n2. 或在本地 HTTP 环境下使用此应用\n3. 或联系管理员升级 API 端点为 HTTPS');
+                         }
+                        
+                        const response = await fetch(fetchUrl, fetchOptions);
 
                         if (!response.ok) {
                             let errorMsg = "API 请求失败";
