@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>准爸爸的100个胎教故事 (第一批)</title>
+        <style>
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    "Helvetica Neue", Arial, sans-serif;
+                line-height: 1.8;
+                color: #333;
+                background-color: #fdfaf6;
+                margin: 0;
+                padding: 20px;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #ffffff;
+                padding: 20px 40px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            }
+            h1 {
+                text-align: center;
+                color: #e88c6d;
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+            .intro {
+                text-align: center;
+                color: #777;
+                margin-bottom: 30px;
+                font-size: 1.1em;
+            }
+            .category-title {
+                color: #6a8a82;
+                border-bottom: 2px solid #e0e0e0;
+                padding-bottom: 5px;
+                margin-top: 40px;
+            }
+            .story-item {
+                display: flex;
+                align-items: flex-start;
+                margin: 15px 0;
+                padding: 10px;
+                border-radius: 8px;
+                transition: background-color 0.3s;
+            }
+            .story-item.told {
+                background-color: #f0f0f0;
+            }
+            .story-item.told summary label {
+                text-decoration: line-through;
+                color: #888;
+            }
+            .story-item input[type="checkbox"] {
+                margin-right: 15px;
+                margin-top: 10px;
+                flex-shrink: 0;
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+            details {
+                width: 100%;
+            }
+            summary {
+                cursor: pointer;
+                font-size: 1.2em;
+                font-weight: 500;
+                color: #4a4a4a;
+                list-style: none;
+                display: block;
+            }
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            summary::before {
+                content: "▶";
+                margin-right: 8px;
+                font-size: 0.8em;
+                color: #e88c6d;
+                display: inline-block;
+                transition: transform 0.2s;
+            }
+            details[open] > summary::before {
+                transform: rotate(90deg);
+            }
+            .story-content {
+                margin-top: 10px;
+                padding: 15px 20px;
+                background-color: #f9f9f9;
+                border-left: 4px solid #6a8a82;
+                border-radius: 0 4px 4px 0;
+            }
+            .story-content p {
+                margin: 10px 0;
+            }
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                color: #aaa;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>我的胎教故事宝典</h1>
+            <p class="intro">
+                亲爱的宝宝，这是爸爸为你准备的完整故事。愿我的声音，伴你安然入梦。
+            </p>
+
+            <p class="intro" style="color: #e88c6d">
+                <strong>第一批：10个完整故事</strong>
+            </p>
+
+            <div id="story-list">
+                <h2 class="category-title">自然的小夜曲</h2>
+                <div class="story-item" id="item-story-1">
+                    <input
+                        type="checkbox"
+                        id="story-1"
+                        name="story-1"
+                        onchange="toggleStoryStatus('story-1')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-1">1. 月亮船的旅行</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                宝宝，静静地听，爸爸要给你讲一个关于旅行的故事。
+                            </p>
+                            <p>
+                                在一片好大好大的绿叶子上，躺着一颗晶莹的小水滴。太阳公公一晒，小水滴伸了个懒腰，从叶子上“滴答”一声，跳进了一条丁冬作响的小溪里。小溪拉着它的手说：“你好呀，我们一起去旅行吧！”
+                            </p>
+                            <p>
+                                它们流啊流，穿过了长满青草的草地，看到了五颜六色的小花在点头；它们绕过了圆圆的鹅卵石，听到了小鱼在水里吐泡泡。后来，它们汇入了一条更宽阔的河流，最后，它们来到了无边无际的大海。
+                            </p>
+                            <p>
+                                大海的怀抱好温暖，太阳公公的阳光照在海面上，暖洋洋的。小水滴感觉自己变得好轻好轻，慢慢地飞了起来，变成了一朵白白软软的云。它和许多云朵小伙伴手拉着手，在蓝天上飘荡。
+                            </p>
+                            <p>
+                                天黑了，月亮姐姐出来了，她那弯弯的身体就像一艘银色的小船。月亮船对云朵说：“上来吧，我带你们在夜空里航行。”小水滴和伙伴们轻轻地跳上了月亮船，它们看到了下面城市里像星星一样闪烁的灯光，看到了熟睡的大地。
+                            </p>
+                            <p>
+                                月亮船摇啊摇，就像一个温柔的摇篮。小水滴在船上看着天上的星星，觉得整个世界都好安静。它想：“这真是一次奇妙的旅行呀。”宝宝，现在你也像这颗小水滴一样，躺在温暖的摇篮里，爸爸的声音就是你的月亮船，让我们一起，在甜美的梦里旅行吧。晚安。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="story-item" id="item-story-2">
+                    <input
+                        type="checkbox"
+                        id="story-2"
+                        name="story-2"
+                        onchange="toggleStoryStatus('story-2')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-2">2. 星星的悄悄话</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                宝宝，你听，夜晚的天空不是完全安静的哦，星星们正在说悄悄话呢。
+                            </p>
+                            <p>
+                                有一颗最小最亮的小星星，它的名字叫“亮亮”。每天晚上，它都会努力地眨眼睛，因为它想让一个特别的宝宝看到它。那个宝宝，就是你呀。
+                            </p>
+                            <p>
+                                亮亮说：“嗨，亲爱的宝宝，我是天上的小星星。你看我，在努力地发光，是想告诉你，宇宙是一个很大很大的家。这里有我，有月亮婆婆，还有许多许多我的兄弟姐妹。”
+                            </p>
+                            <p>
+                                “我们每天看着地球慢慢地转圈，看着太阳公公下班，月亮婆婆上班。我们还看到，有一位温柔的爸爸，正在给你讲故事呢。”
+                            </p>
+                            <p>
+                                “别怕黑夜哦，因为有我们这么多星星在天上陪着你。我们会把所有的光芒汇集起来，变成一张柔软的、亮晶晶的毯子，盖在你的梦上，这样，你的梦就会变得又温暖又明亮。”
+                            </p>
+                            <p>
+                                “现在，请你闭上眼睛，感受这片宁静。我们会一直在这里，守护着你，直到明天早晨，太阳公公带着新的一天来叫醒你。嘘……晚安，我们梦里见。”
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="category-title">智慧的寓言</h2>
+                <div class="story-item" id="item-story-3">
+                    <input
+                        type="checkbox"
+                        id="story-3"
+                        name="story-3"
+                        onchange="toggleStoryStatus('story-3')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-3">3. 分享蜂蜜的小熊</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                在森林的深处，住着一只叫做“奔奔”的可爱小熊。奔奔最喜欢的东西，就是甜甜的蜂蜜。
+                            </p>
+                            <p>
+                                有一天，它在森林里探险，闻到了一股特别香甜的味道。它跟着香味走啊走，发现了一棵大树，树上有一个大大的蜂巢，金黄色的蜂蜜正一滴一滴地往下流呢！“哇！太棒了！”奔奔高兴得手舞足蹈。
+                            </p>
+                            <p>
+                                它迫不及待地想把整罐蜂蜜都抱回家自己享用。可是，当它抱着蜜罐时，它想起了它的好朋友们：爱吃甜点心的小松鼠、总说自己饿了的小兔子、还有勤劳的啄木鸟医生。它想：“如果只有我一个人吃，快乐好像有点孤单。如果大家一起吃，快乐会不会变得更大呢？”
+                            </p>
+                            <p>
+                                于是，奔奔决定举办一个“蜂蜜分享会”。它跑去告诉了所有的好朋友。大家听到消息都开心极了！小松鼠带来了自己珍藏的坚果，小兔子带来了新鲜的胡萝卜，啄木鸟医生为大家表演了敲鼓。它们围坐在一起，分享着甜甜的蜂蜜和各自带来的食物，森林里充满了欢声笑语。
+                            </p>
+                            <p>
+                                奔奔舔着爪子上的蜂蜜，心里觉得比任何一次独自享用时都要甜。它明白了，分享不是让自己的东西变少了，而是让快乐变得更多了。宝宝，爱也是这样哦，当我们把爱分享出去，我们自己也会收获更多的爱和快乐。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="story-item" id="item-story-4">
+                    <input
+                        type="checkbox"
+                        id="story-4"
+                        name="story-4"
+                        onchange="toggleStoryStatus('story-4')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-4">4. 小乌龟的坚持</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>宝宝，今天我们来讲一个关于“坚持”的故事。</p>
+                            <p>
+                                森林里要举行一场登山比赛，奖品是山顶上智慧泉的泉水，据说喝了能变得更聪明。小兔子、小猴子，还有小乌龟都报名了。
+                            </p>
+                            <p>
+                                比赛开始了，小兔子跑得飞快，一会儿就不见了踪影。小猴子在树上荡来荡去，也非常敏捷。只有小乌龟，背着重重的壳，一步一步，慢慢地往前爬。
+                            </p>
+                            <p>
+                                小兔子跑了一半，觉得口渴，看到路边的萝卜地，就跑进去吃了个饱。吃饱了就想睡觉，它心想：“我睡一觉起来，小乌龟肯定还在山脚呢。”于是它就在树下睡着了。
+                            </p>
+                            <p>
+                                小猴子呢，爬到一半，看到一棵挂满桃子的树，就停下来摘桃子吃。吃了一个又一个，玩得不亦乐乎，把比赛的事情都忘了。
+                            </p>
+                            <p>
+                                而我们的小乌龟，它虽然爬得慢，但它心里只有一个念头：“我要爬到山顶，我要喝智慧泉的水。”它没有停下来，没有放弃，一直朝着山顶的方向，一步一个脚印地努力着。汗水湿透了它的脸颊，但它的眼神非常坚定。
+                            </p>
+                            <p>
+                                最后，当小兔子睡醒，小猴子玩够了，再往山顶跑时，它们惊讶地发现，小乌龟已经第一个到达了终点，正在开心地喝着智慧泉的水呢。
+                            </p>
+                            <p>
+                                宝宝，这个故事告诉我们，跑得快不一定能赢，最重要的是坚持不懈。就像你现在在妈妈肚子里成长一样，每天都在努力，坚持下去，就会迎来一个健康美好的世界。爸爸妈妈也会一直陪着你，为你加油。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="category-title">想象的翅膀</h2>
+                <div class="story-item" id="item-story-5">
+                    <input
+                        type="checkbox"
+                        id="story-5"
+                        name="story-5"
+                        onchange="toggleStoryStatus('story-5')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-5">5. 云朵棉花糖</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                宝宝，你有没有想过，天上的云朵是什么味道的呢？
+                            </p>
+                            <p>
+                                有一朵小小的、特别蓬松的白云，它很羡慕公园里小朋友手里的棉花糖。棉花糖是粉色的、蓝色的、黄色的，看起来又甜又软。小云朵想：“要是我也能变成棉花糖，那该多好啊！”
+                            </p>
+                            <p>
+                                它把这个愿望告诉了风伯伯。风伯伯笑着说：“这有何难？”说着，它轻轻一吹，把小云朵带到了夕阳的身边。夕阳正要下山，它把最温柔的橙色和粉色的光芒，像颜料一样，刷在了小云朵的身上。瞬间，小云朵变成了一朵粉橙色的云彩，漂亮极了。
+                            </p>
+                            <p>
+                                接着，一道美丽的彩虹姐姐出现了，她又在小云朵的边缘镶上了一圈淡淡的紫色和蓝色。现在，小云朵看起来真的像一个巨大又美味的棉花糖了。
+                            </p>
+                            <p>
+                                晚上，这朵“棉花糖云”悄悄地飘到了你的窗前。它把自己的一小片，像雪花一样，轻轻地放进了你的梦里。在梦中，你真的尝到了这片云，哇，是甜甜的草莓牛奶味！
+                            </p>
+                            <p>
+                                这朵小云朵开心极了，因为它不仅实现了自己的愿望，还给一个可爱的宝宝送去了一个甜甜的梦。宝宝，现在，你也快快睡吧，说不定今晚，也会有一朵棉花糖云，飘进你的梦里哦。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="story-item" id="item-story-6">
+                    <input
+                        type="checkbox"
+                        id="story-6"
+                        name="story-6"
+                        onchange="toggleStoryStatus('story-6')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-6">6. 开往童话镇的火车</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                嘘……宝宝，快听，“呜呜——”是什么声音？啊，原来是午夜十二点的童话小火车到站了。
+                            </p>
+                            <p>
+                                这可不是一辆普通的火车哦。它的车头是巧克力饼干做的，烟囱里冒出来的不是黑烟，而是香甜的牛奶泡泡。车厢是五颜六色的水果糖，轮子是黑色的奥利奥。这辆小火车，专门在宝宝睡着后，载着他们的想象力，开往神奇的童话镇。
+                            </p>
+                            <p>
+                                你的想象力小人儿，背着一个小小的背包，第一个跳上了火车。火车开了，窗外的风景好奇怪呀，星星变成了路灯，月亮是天上的大时钟。
+                            </p>
+                            <p>
+                                第一站是“玩具复活站”，所有的玩具都在这里开派对，泰迪熊在跳舞，小汽车在赛跑。第二站是“故事书里站”，你能看到三只小猪正在盖房子，还能和爱丽丝一起喝下午茶。
+                            </p>
+                            <p>
+                                火车继续往前开，穿过了“泡泡海洋”，越过了“果冻山”，最后到达了终点站——“美梦童话镇”。镇长是一位慈祥的白胡子爷爷，他会给每一位到来的小乘客，送上一份用星光和晚安吻包装好的礼物——一个香甜安稳的整夜好梦。
+                            </p>
+                            <p>
+                                你的想象力小人儿收到了礼物，开心地坐上返程的火车。现在，小火车已经悄悄地把你送回了温暖的被窝里。晚安，我的小旅客，祝你有个好梦。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="category-title">爱的旋律</h2>
+                <div class="story-item" id="item-story-7">
+                    <input
+                        type="checkbox"
+                        id="story-7"
+                        name="story-7"
+                        onchange="toggleStoryStatus('story-7')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-7">7. 爸爸的心跳声</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                亲爱的宝宝，现在，请你安安静静地，听一个世界上最美妙的声音。你听到了吗？咚咚……咚咚……
+                            </p>
+                            <p>
+                                这个声音，是爸爸的心跳声。它像一面温暖又有力的大鼓，一直在为你而敲响。当你还在妈妈温暖的房子里时，爸爸就会把耳朵轻轻贴在妈妈的肚子上，希望你能听到这持续不断的鼓声。
+                            </p>
+                            <p>
+                                这“咚咚”声在告诉你：“你好呀，我的小宝贝，我是你的爸爸。”
+                            </p>
+                            <p>
+                                这“咚咚”声在告诉你：“别害怕，爸爸在这里，永远守护着你和妈妈。”
+                            </p>
+                            <p>
+                                这“咚咚”声还在告诉你：“我们是多么地期待你的到来，整个世界都因为你而变得不一样了。”
+                            </p>
+                            <p>
+                                现在，也许你正躺在爸爸的臂弯里，或者爸爸的手正轻轻地放在妈妈的肚子上。这鼓声离你更近了，它平稳、有力，是世界上最能让你安心的摇篮曲。它会一直这样，温柔而坚定地敲着，陪伴你成长，伴你探索这个新奇的世界。
+                            </p>
+                            <p>
+                                所以，宝宝，安心地睡吧。在这“咚咚”的守护声中，进入一个充满爱与和平的梦乡。咚咚……咚咚……爸爸爱你。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="story-item" id="item-story-8">
+                    <input
+                        type="checkbox"
+                        id="story-8"
+                        name="story-8"
+                        onchange="toggleStoryStatus('story-8')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-8">8. 妈妈的拥抱树</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                宝宝，你知道吗？妈妈有一个神奇的魔法，她可以变成一棵独一无二的“拥抱树”。
+                            </p>
+                            <p>
+                                这棵树呀，有着世界上最温暖的树干，那就是妈妈的怀抱。当你还在妈妈肚子里的时候，你就住在这棵大树最核心、最安全的地方。这里四季如春，风雨无扰，只有妈妈温柔的心跳声和说话声陪伴着你。
+                            </p>
+                            <p>
+                                这棵树的枝桠，是妈妈的手臂。它们会轻轻地抚摸，为你挡住刺眼的光，为你拉好小小的被子。无论你什么时候需要，这双枝桠都会伸过来，给你一个最最温暖的拥抱。
+                            </p>
+                            <p>
+                                这棵树的叶子，是妈妈的微笑和爱意。每一片叶子都闪着光，上面写满了对你的期待和祝福。它们在风中沙沙作响，像是在为你唱着动听的歌谣。
+                            </p>
+                            <p>
+                                这棵树的根，深深地扎在爱的土壤里，汲取着爸爸的爱、家人的爱，把所有的营养都输送给你，让你健康快乐地成长。
+                            </p>
+                            <p>
+                                将来，无论你走到哪里，遇到了什么开心或不开心的事情，只要你回到妈妈的身边，这棵“拥抱树”就永远为你敞开。它是你最安全的港湾，是你永远的依靠。现在，就让这棵大树，抱着你，慢慢地，慢慢地，睡个好觉吧。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="story-item" id="item-story-9">
+                    <input
+                        type="checkbox"
+                        id="story-9"
+                        name="story-9"
+                        onchange="toggleStoryStatus('story-9')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-9">9. 我为什么期待你</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                我的小宝贝，你知道吗？在爸爸妈妈知道你即将要来到我们的世界的那一天，我们的生活就充满了阳光和期待。
+                            </p>
+                            <p>
+                                爸爸开始变得更爱笑了，他会对着妈妈的肚子，讲他今天遇到的趣事，虽然你可能还听不懂，但他就是想第一个分享给你。
+                            </p>
+                            <p>
+                                妈妈开始变得更温柔了，她会轻轻地抚摸着肚子，想象着你小小的手指、小小的脚丫会是什么样子。她为你准备了柔软的小衣服，还有温暖的小床。
+                            </p>
+                            <p>
+                                我们一起期待，期待第一次听到你的心跳声，那是世界上最动听的音乐；我们期待第一次在B超照片上看到你小小的轮廓，那是世界上最美的画。
+                            </p>
+                            <p>
+                                我们期待着，有一天能抱着小小的你，感受你的重量和温度；我们期待着，能亲吻你稚嫩的脸颊，闻你身上淡淡的奶香；我们期待着，你第一次睁开眼睛看我们，第一次对我们笑，第一次含糊不清地叫出“爸爸”、“妈妈”。
+                            </p>
+                            <p>
+                                我们期待陪你度过生命中的每一个“第一次”。因为你的到来，我们的家才变得完整。你不是一个突然的访客，而是我们生命里最重要、最期待的礼物。所以，慢慢来，不用急，我们在外面，用全部的爱，等待着你。晚安，我们最爱的小期待。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+                <h2 class="category-title">智慧的寓言</h2>
+                <div class="story-item" id="item-story-10">
+                    <input
+                        type="checkbox"
+                        id="story-10"
+                        name="story-10"
+                        onchange="toggleStoryStatus('story-10')"
+                    />
+                    <details>
+                        <summary>
+                            <label for="story-10">10. 爱提问的小狐狸</label>
+                        </summary>
+                        <div class="story-content">
+                            <p>
+                                森林里有一只叫“奇奇”的小狐狸，他和其他小狐狸有点不一样，他总是有问不完的问题。
+                            </p>
+                            <p>
+                                “妈妈，为什么天空是蓝色的？”“爸爸，为什么小鸟会飞，我们却不会？”爸爸妈妈总是耐心地回答他，但奇奇的问题实在太多了。于是，他决定自己去寻找答案。
+                            </p>
+                            <p>
+                                他遇到了大象伯伯，就问：“大象伯伯，您为什么那么有力量呢？”大象伯伯温和地回答：“因为我每天都脚踏实地，稳稳地走路，并且乐于帮助别人。”奇奇明白了，力量来自于稳重和善良。
+                            </p>
+                            <p>
+                                他看到了猫头鹰老师，就问：“猫头鹰老师，您为什么知道那么多事情呢？”猫头鹰老师眨眨眼说：“因为我白天休息，夜晚观察，我喜欢安静地阅读和思考。”奇奇明白了，智慧来自于观察和学习。
+                            </p>
+                            <p>
+                                他碰到了小蜜蜂，就问：“小蜜蜂，你们为什么总是在一起工作？”小蜜蜂嗡嗡地回答：“因为我们知道，一个人的力量很小，但大家团结在一起，就能建造美丽的家园，酿出香甜的蜜。”奇奇明白了，成功来自于团结和协作。
+                            </p>
+                            <p>
+                                小狐狸奇奇带着满满的答案回到了家。他虽然还小，但他知道，世界是一个巨大的课堂，只要保持好奇，勇敢提问，就能学到无穷无尽的知识。宝宝，希望你将来也像奇奇一样，对这个世界充满好奇，爸爸妈妈会陪你一起，去寻找每一个问题的答案。
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <footer>
+                <p>为爱而声 · 宝爸专属 (未完待续...)</p>
+            </footer>
+        </div>
+
+        <script>
+            const STORAGE_KEY = "toldStories";
+            document.addEventListener("DOMContentLoaded", () => {
+                const toldStories =
+                    JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+                toldStories.forEach((storyId) => {
+                    const checkbox = document.getElementById(storyId);
+                    if (checkbox) {
+                        checkbox.checked = true;
+                        updateStoryVisual(storyId, true);
+                    }
+                });
+            });
+            function toggleStoryStatus(storyId) {
+                const checkbox = document.getElementById(storyId);
+                updateStoryVisual(storyId, checkbox.checked);
+                saveAllToldStories();
+            }
+            function updateStoryVisual(storyId, isTold) {
+                const storyItem = document.getElementById("item-" + storyId);
+                if (storyItem) {
+                    if (isTold) {
+                        storyItem.classList.add("told");
+                    } else {
+                        storyItem.classList.remove("told");
+                    }
+                }
+            }
+            function saveAllToldStories() {
+                const allCheckboxes = document.querySelectorAll(
+                    '#story-list input[type="checkbox"]',
+                );
+                const toldStories = [];
+                allCheckboxes.forEach((checkbox) => {
+                    if (checkbox.checked) {
+                        toldStories.push(checkbox.id);
+                    }
+                });
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(toldStories));
+            }
+        </script>
+    </body>
+</html>
