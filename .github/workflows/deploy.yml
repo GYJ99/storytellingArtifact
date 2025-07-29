@@ -30,7 +30,12 @@ jobs:
       - name: Create config file
         run: |
           mkdir -p _site
-          cp -r * _site/ 2>/dev/null || true
+          # Copy all files including hidden ones, excluding .git and _site itself
+          find . -maxdepth 1 -type f -not -name '.*' -exec cp {} _site/ \;
+          # Ensure index.html exists
+          if [ ! -f "_site/index.html" ]; then
+            cp index.html _site/
+          fi
           cat > _site/config.js << EOF
           window.GEMINI_API_KEY = '${{ secrets.GEMINI_API_KEY }}';
           window.GEMINI_BASE_URL = '${{ secrets.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com' }}';
