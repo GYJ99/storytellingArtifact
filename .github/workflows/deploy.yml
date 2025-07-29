@@ -1,0 +1,51 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Create config file
+        run: |
+          mkdir -p _site
+          cp -r * _site/ 2>/dev/null || true
+          cat > _site/config.js << EOF
+          window.GEMINI_API_KEY = '${{ secrets.GEMINI_API_KEY }}';
+          window.GEMINI_BASE_URL = '${{ secrets.GEMINI_BASE_URL || 'https://generativelanguage.googleapis.com' }}';
+          EOF
+
+      - name: Update HTML to include config
+        run: |
+          cd _site
+          sed -i 's|</head>|<script src="config.js"></script></head>|' index.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

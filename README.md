@@ -13,39 +13,61 @@
 
 ## GitHub Pages 部署指南
 
-### 方法一：使用GitHub Secrets（推荐）
+### 使用GitHub Secrets（推荐）
 
-1. Fork 或上传此项目到你的GitHub仓库
-2. 在仓库设置中添加Secrets：
-   - 进入 `Settings` > `Secrets and variables` > `Actions`
+1. **Fork 或上传此项目到你的GitHub仓库**
+
+2. **配置Repository Secrets：**
+   - 进入仓库的 `Settings` > `Secrets and variables` > `Actions`
    - 添加以下Repository Secrets：
      - Name: `GEMINI_API_KEY`
        Value: 你的Gemini API密钥
      - Name: `GEMINI_BASE_URL` (可选)
        Value: 自定义的Gemini API基础URL (默认: https://generativelanguage.googleapis.com)
 
-3. 启用GitHub Pages：
-   - 进入 `Settings` > `Pages`
+3. **启用GitHub Pages：**
+   - 进入仓库的 `Settings` > `Pages`
    - Source 选择 `GitHub Actions`
    - 项目已包含 `.github/workflows/deploy.yml` 工作流文件
 
-4. 推送代码到main分支，GitHub Actions会自动部署
+4. **部署：**
+   - 推送代码到main分支，GitHub Actions会自动部署
+   - 部署完成后，访问 `https://你的用户名.github.io/仓库名` 即可使用
 
-### 方法二：直接在HTML中配置
+### 工作原理
 
-在 `故事生成器.html` 文件中找到以下行：
+GitHub Actions工作流会：
+1. 读取你设置的Secrets中的API密钥
+2. 自动生成包含API密钥的 `config.js` 文件
+3. 将文件部署到GitHub Pages
 
-```javascript
-apiKey: window.GEMINI_API_KEY || null
-```
+这样既保证了API密钥的安全性，又能让应用正常工作。
 
-替换为：
+## 本地开发
 
-```javascript
-apiKey: 'YOUR_GEMINI_API_KEY_HERE'
-```
+如果你想在本地测试应用：
 
-**注意：此方法会将API密钥暴露在源代码中，不推荐用于公开仓库。**
+1. **修改 `config.js` 文件：**
+   ```javascript
+   window.GEMINI_API_KEY = '你的真实API密钥';
+   window.GEMINI_BASE_URL = 'https://generativelanguage.googleapis.com';
+   ```
+
+2. **使用本地服务器运行：**
+   ```bash
+   # 使用Python
+   python -m http.server 8000
+   
+   # 或使用Node.js
+   npx serve .
+   ```
+
+3. **访问 `http://localhost:8000` 进行测试**
+
+**重要提醒：** 
+- 项目已包含 `.gitignore` 文件来忽略 `config.js`，防止意外提交真实API密钥
+- 如果你修改了 `config.js` 用于本地测试，Git会自动忽略这些更改
+- GitHub Actions部署时会自动生成新的 `config.js` 文件，使用Secrets中的API密钥
 
 ## 获取Gemini API密钥
 
